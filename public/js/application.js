@@ -8,3 +8,8 @@ $(document).ready(function () {
   });
 
 });
+
+new datepickr('datepick', {
+	'fullCurrentMonth': false,
+	'dateFormat': '1, F j'
+});

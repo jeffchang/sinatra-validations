@@ -1,0 +1,26 @@
+<div class='container'>
+
+  <h2>Create a new event!</h2>
+    
+  <form action="/save" method="post">
+    <h3>Event title</h3>
+    <input type="text" name="title" size="60" required />
+
+    <h3>Organizer</h3>
+    <input type="text" name="organizer" size="40" required />
+
+    <h3>Your email address</h3>
+    <input type="email" name="email" size="40" required />
+
+    <h3>Description</h3>
+    <input type="text" name="description" size="40" placeholder="Describe your event!" />
+
+    <h3>Select a date!</h3>
+    <input type="text" id="datepick" name="date" size="50" required />
+
+    <h3>Pick a time!</h3>
+    <input type="text" name="time" size="50" placeholder="any format is fine" required />
+  </form>
+
+  <input type="submit" value="Create an event!" />
+</div>
