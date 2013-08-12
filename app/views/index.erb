@@ -1,6 +1,6 @@
-<% unless @message %>
+<% if @message %>
 	<div id="myModal" class="reveal-modal">
-		<h1>Message from the Eventifier</h1>
+		<h1>A friendly message from the Eventifier</h1>
 		<% @message.each do |message| %>
 			<p><%= message %></p>
 	<% end %>
@@ -8,10 +8,15 @@
 </div>
 <% end %>
 
+<h2>Welcome to the Eventifier!</h2>
+<p><i>Scheduling new and exciting events since 2013</i></p><br>
+
+<% if @events.empty? %>
+	<h3><i>No events yet scheduled!  Add something!</i></h3>
+<% end %>
+
 <ul>
 <% @events.each do |event| %>
-  <li><a href="/events/<%=event.id%>/show"><%=event.date%></a> - <%=event.title%></li>
+  <li class="events"><a href="/events/<%=event.id%>/show"><%=event.datetime%></a> - <%=event.title%></li>
 <% end %>
 </ul>
-
-<a href="/events/new"><button>Create a new event!</button></a>

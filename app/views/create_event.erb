@@ -2,9 +2,11 @@
 
   <h2>Create a new event!</h2>
     
-  <form action="/events/create" method="post">
+  <form id="newevent" action="/events/create" method="post">
+    <input type="submit" id="createit" value="Create your event!" /><br>
+
     <h3>Event title</h3>
-    <input type="text" name="organizer_title" size="60" required />
+    <input type="text" name="title" size="60" required />
 
     <h3>Organizer name</h3>
     <input type="text" name="organizer_name" size="40" value="<%= @organizer %>" required />
@@ -21,6 +23,4 @@
     <h3>Pick a time!</h3>
     <input type="text" name="time" size="50" placeholder="any format is fine" required />
   </form>
-
-  <input type="submit" value="Create an event!" />
 </div>

@@ -8,10 +8,9 @@ $(document).ready(function () {
     var request = $.ajax({ url: $(this).attr('href'), type: 'delete' });
     request.done(function () { window.location = "/"; });
   });
-
+  new datepickr('datepick', {
+	'fullCurrentMonth': false,
+	'dateFormat': 'F jS, Y'
 });
 
-new datepickr('datepick', {
-	'fullCurrentMonth': false,
-	'dateFormat': '1, F j'
 });

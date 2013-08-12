@@ -73,3 +73,17 @@ form.quirks {
   margin-right: 20px;
   width: 200px;
 }
+
+#createit {
+  float: right;
+  margin-right: 80px;
+}
+
+#newevent h3 {
+  padding-top: 10px;
+}
+
+.events {
+  padding-bottom: 30px;
+  font-size: 18px;
+}
