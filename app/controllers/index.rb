@@ -13,6 +13,8 @@ get '/events/:id/show' do |id|
 end
 
 get '/events/new' do
+  @organizer = session[:organizer]
+  @email = session[:email]
   erb :create_event
 end
 
@@ -20,6 +22,8 @@ post '/events/create' do
   params[:date] = Chronic.parse(params[:date] + " " + params[:time])
   params.delete(:time)
   session[:message] = []
+  session[:organizer] = params[:organizer_name]
+  session[:email] = params[:organizer_email]
   event = Event.new(params)
   unless params[:date] || params[:date] < Time.now
     if event.valid?
